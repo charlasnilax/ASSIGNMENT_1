@@ -17,5 +17,16 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
+};
 
+
+// function notFound(res) {
+//     res.status(404).send("Not found.");
+// }
+
+// Posts.findOne({_id: Service, deleted: false}).exec()
+//       .then(function(post)) {
+//         if(!post) {
+//           notFound(res);
+//         }
+//        };
