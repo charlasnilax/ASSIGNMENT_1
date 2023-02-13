@@ -9,10 +9,17 @@
     <link rel="Stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+       body{
+        background-color: rgb(70, 71, 71);
+       }
         #navbarNavDropdown{
           margin-left: 600px;
         }
-       
+       .container-fluid{
+        background-color: rgb(110, 146, 245);
+        padding-top: 5px;
+        padding-bottom: 5px;
+       }
        #fieldset1{
         background-color: rgb(202, 236, 225);
         padding: 10px ;
@@ -22,7 +29,7 @@
 
        }
        #fieldset2{
-        background-color: rgb(244, 248, 248);
+        background-color: rgb(203, 248, 248);
         padding: 10px;
         
         margin-left: 100px;
@@ -50,9 +57,9 @@
         color: black;
        }
        .container2{
-        margin-left: 200px;
-        margin-right: 100px;
-        width: 1000px;
+        margin-left: 225px;
+        margin-right: 200px;
+        width: 850px;
         padding: 10px;
         border: 5px solid rgb(244, 246, 247);
         display: flex;
@@ -64,7 +71,7 @@
         padding: 5px;
         border: 5px solid rgb(248, 244, 244);
         flex-wrap: wrap;
-
+        margin-left: 20px;
        }
        .heading4{
         text-align: center;
@@ -152,6 +159,72 @@
 width: 300px;
 height:250px;
 }
+/* grid */
+.main {
+  max-width: 1000px;
+  
+}
+* {
+  box-sizing: border-box;
+}
+
+
+
+.row {
+  margin: 10px -16px;
+  margin-left: 60px;
+  
+}
+
+/* Add padding BETWEEN each column */ */
+.row,
+.row > .column {
+  padding: 20px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 30%;
+  height: 30%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+
+  display: table;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* .btn.active {
+  background-color: #666;
+ color: #ddd;
+} */
+/* grid end */
     </style>
 </head>
 <body>
@@ -253,7 +326,7 @@ height:250px;
         <div class="row">
 
         <div class="col-md-8">
-          <img  id="img2"   src="vector1.jpeg" alt="work image" width="300" height="300" >
+          <img  id="img2"   src="vector1.jpeg" alt="work image" width="300px" height="200px"  onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" >
         </div>
         <div class="col-6 col-md-4">
            <h2>Voluptatem dignissimos provident <br>quasi</h2>
@@ -279,7 +352,7 @@ height:250px;
       </div>
     </fieldset>
         </section3> 
-        <section4>
+        <!-- <section4>
     <ul class="nav justify-content-center" >
     <li class="nav-item">
       <a class="nav-link disabled">Portfolio</a>
@@ -290,26 +363,96 @@ height:250px;
         <a class="nav-link active" aria-current="page" href="#">All</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">App</a>
+        <a class="nav-link" href="#">cream</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Card</a>
+        <a class="nav-link" href="#">juice</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Web</a>
+        <a class="nav-link">perfume</a>
       </li>
     </ul>
     <div class="container2">
-      <div class="box"><img src="images.jpeg" alt="" width="300" height="300"></div>
-      <div class="box"><img src="images 1.jpeg" alt="" width="300" height="300"></div>
-      <div class="box"><img src="image2.jpeg" alt="" width="300" height="200"></div>
-      <div class="box"><img src="image3.webp" alt="" width="300" height="300"></div>
-      <div class="box"><img src="image4.jpeg" alt="" width="300" height="300"></div>
-      <div class="box"><img src="image5.jpeg" alt="" width="300" height="300"></div>
-      <div class="box"><img src="image6.webp" alt="" width="300" height="300" ></div>
-      <div class="box"><img src="images 7.jpeg" alt="" width="300" height="300" ></div>
-      <div class="box"><a href="page.html"><img src="image8.webp" alt="" width="300" height="300"></a></div>
+      <div class="box"><img src="image.jpeg" alt="" width="225" height="225"></div>
+      <div class="box"><img src="images 1.jpeg" alt="" width="225" height="225"></div>
+      <div class="box"><img src="image2.jpeg" alt="" width="225" height="225"></div>
+      <div class="box"><img src="image3.jpeg" alt="" width="225" height="225"></div>
+      <div class="box"><img src="image4.jpeg" alt="" width="225" height="225"></div>
+      <div class="box"><img src="image5.jpeg" alt="" width="225" height="225"></div>
+      <div class="box"><img src="image6.jpeg" alt="" width="225" height="225" ></div>
+      <div class="box"><img src="images 7.jpeg" alt="" width="225" height="225" ></div>
+      <div class="box"><a href="page.html"><img src="image8.webp" alt="" width="225" height="225"></a></div>
     </div>
+  </section4> -->
+  <section4>
+    <h3>PORTFOLIO</h3>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')">  All</button>
+  <button class="btn" onclick="filterSelection('cream')"> Cream</button>
+  <button class="btn" onclick="filterSelection('perfume')"> Perfume</button>
+  <button class="btn" onclick="filterSelection('juice')"> Juice</button>
+</div>
+    <div class="row">
+      <div class="column cream">
+        <div class="content">
+          <img src="images 1.jpeg" alt="" style="height: 200; width:200px;">
+          
+        </div>
+      </div>
+      <div class="column cream">
+        <div class="content">
+        <img src="image5.jpeg" alt="" style="height: 200; width:200px;">
+          
+        </div>
+      </div>
+      <div class="column cream">
+        <div class="content">
+        <img src="image8.webp" alt="" style="height:300px; width: 300px;">
+          
+        </div>
+      </div>
+      
+      <div class="column perfume">
+        <div class="content">
+          <img src="image.jpeg" alt="" style="height: 200; width:200px;">
+          
+        </div>
+      </div>
+      <div class="column perfume">
+        <div class="content">
+        <img src="image2.jpeg" alt="" style="height: 200px; width:400px;">
+
+        </div>
+      </div>
+      <div class="column perfume">
+        <div class="content">
+        <img src="image6.jpeg" alt="" >
+          
+        </div>
+      </div>
+    
+      <div class="column juice">
+        <div class="content">
+          <img src="image4.jpeg" alt="" >
+          
+        </div>
+      </div>
+      <div class="column juice">
+        <div class="content">
+        <img src="images 7.jpeg" alt="" >
+          
+        </div>
+      </div>
+      <div class="column juice">
+        <div class="content">
+        <img src="image3.jpeg" alt="" style="width: 200px ; height: 200px;">
+          
+        </div>
+      </div>
+    <!-- END GRID -->
+    </div>
+    
   </section4>
   <section5>
     <ul class="nav justify-content-center">
